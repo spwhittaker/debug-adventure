@@ -28,7 +28,7 @@ describe('constructor function', () => {
     };
     player = new Player(config);
   });
-  it('returns an object', () => {
+  fit('returns an object', () => {
     expect(player).toBeInstanceOf(Object);
   });
   it('inherits from character', () => {

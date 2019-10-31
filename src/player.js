@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-const Character = require('../character');
+const Character = require('../src/character');
 
 function Player(config) {
   Character.call(this, config);
