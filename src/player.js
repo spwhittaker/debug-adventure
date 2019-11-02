@@ -1,10 +1,10 @@
 /* eslint-disable func-names */
-const Character = require('../src/character');
+const Character = require('./character');
 
 function Player(config) {
   Character.call(this, config);
   this.equippedWeapon = null;
-}
+};
 
 Player.prototype = Object.create(Character.prototype);
 
@@ -19,12 +19,12 @@ Player.prototype._describeAttack = function () {
 };
 
 Player.prototype.equip = function (weapon) {
-  this.equippedWeapon = this.weapon;
+  this.equippedWeapon = weapon;
 };
 
 Player.prototype.attack = function (target) {
   target._takeDamage(this.weapon.damage);
-  return this._describeAttack(enemy);
+  return this._describeAttack(target);
 };
 
-module.export = Player;
+module.exports = Player;

@@ -28,7 +28,7 @@ describe('constructor function', () => {
     };
     player = new Player(config);
   });
-  fit('returns an object', () => {
+  it('returns an object', () => {
     expect(player).toBeInstanceOf(Object);
   });
   it('inherits from character', () => {
@@ -51,7 +51,7 @@ describe('constructor function', () => {
       player.equip(sword);
       player.attack(trainingDummy);
     });
-    it('can attack with a weapon', () => {
+    fit('can attack with a weapon', () => {
       expect(trainingDummy.health).toBe(trainingDummy.maxHealth - sword.damage);
     });
     it('can describe its attack', () => {
