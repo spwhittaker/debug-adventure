@@ -51,7 +51,7 @@ describe('constructor function', () => {
       player.equip(sword);
       player.attack(trainingDummy);
     });
-    fit('can attack with a weapon', () => {
+    it('can attack with a weapon', () => {
       expect(trainingDummy.health).toBe(trainingDummy.maxHealth - sword.damage);
     });
     it('can describe its attack', () => {
